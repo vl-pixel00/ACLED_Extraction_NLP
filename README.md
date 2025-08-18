@@ -6,9 +6,9 @@ This repository contains the implementation of my master's dissertation project 
 
 **Base Model**: Llama 3.2 1B Instruct (4-bit quantised)
 
-**ML Framework** Apple's MLX
+**ML Framework**: Apple's MLX
 
-**Dataset** Europe-Central-Asia_2018-2025_July
+**Dataset**: Europe-Central-Asia_2018-2025_July
 
 ## Research Objectives
 
