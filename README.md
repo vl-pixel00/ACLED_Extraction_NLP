@@ -117,13 +117,13 @@ Machine learning implementation covering:
    cd ACLED_Extraction_NLP
 
 2. **Install dependencies**:
-
-pip install -r requirements.txt
+    ```bash
+    pip install -r requirements.txt
 
 3. **Verify MLX installation (Apple Silicon only)**:
-
-import mlx.core as mx
-print(f"MLX version: {mx.__version__}")
+    ```bash
+    import mlx.core as mx
+    print(f"MLX version: {mx.__version__}")
 
 ## Research Significance
 
@@ -187,7 +187,7 @@ This project forms part of my Master's dissertation investigating modern conflic
 
 ## Acknowledgements and Credits
 
-We extend our gratitude to the organisations and projects whose contributions made this research possible:
+I extend my gratitude to the organisations and research projects whose contributions made this research possible:
 
 ### ACLED (Armed Conflict Location & Event Data Project)
 - **Contribution**: Providing a real-time conflict database with a rigorous data collection methodology
@@ -209,6 +209,8 @@ We extend our gratitude to the organisations and projects whose contributions ma
 - **Innovation**: Memory-efficient training approach for consumer hardware
 - **Documentation**: [ml-explore.github.io/mlx](https://ml-explore.github.io/mlx/)
 - **Repository**: [github.com/ml-explore/mlx](https://github.com/ml-explore/mlx)
+
+---
 
 **Disclaimer**: This research is conducted for academic purposes only. The findings and methodologies presented are not intended for operational intelligence or policy-making applications. Users should exercise appropriate caution when interpreting conflict-related data and analyses.
 
