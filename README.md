@@ -1,10 +1,12 @@
-# ACLED Conflict Event Extraction Using Natural Language Processing
+# Structured Data Extraction from ACLED Notes
 
 ## Abstract
 
 This repository contains the implementation of my master's dissertation project investigating the application of natural language processing techniques for automated conflict event extraction from ACLED (Armed Conflict Location & Event Data Project) narratives. The research explores the efficacy of fine-tuned large language models in structured data extraction from unstructured conflict reporting, with a specific focus on Eastern Europe, Central Europe, and the Baltic States.
 
-**Base Model**: Llama 3.2 1B Instruct (4-bit quantised), Apple's MLX framework, and ACLED's conflict database.
+**Base Model**: Llama 3.2 1B Instruct (4-bit quantised), 
+**ML Framework** Apple's MLX,
+**Dataset** Europe-Central-Asia_2018-2025_July.
 
 ## Research Objectives
 
@@ -47,8 +49,8 @@ The pipeline extracts fourteen structured elements:
 - **Temporal Intelligence**: Multi-format date parsing and time specifications
 - **Geographic Data**: Location hierarchy and cross-border operation handling
 - **Actor Detection**: 10-tier hierarchical system covering military forces, protest groups, and security services
-- **Modern Weapons Recognition**: Contemporary systems including FPV drones, Shahed drones, HIMARS, and calibre-specific artillery
-- **Infrastructure Impact**: Eight critical categories from power grid disruption to military installations
+- **Modern Weapons Recognition**: Contemporary systems including FPV drones, HIMARS, and calibre-specific artillery, alongside armoured vehicles and aircraft
+- **Infrastructure Impact**: 8 critical categories from power grid disruption to military installations
 - **Cross-Border Intelligence**: Special handling for interstate operations with automatic attribution
 - **Quality Metrics**: Content quality scoring and information density assessment
 
