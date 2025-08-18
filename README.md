@@ -117,7 +117,7 @@ Machine learning implementation covering:
 
 1. **Clone repository**:
    ```bash
-   git clone [your-repo-url]
+   git clone [https://github.com/vl-pixel00/ACLED_Extraction_NLP]
    cd ACLED_Extraction_NLP
 
 2. **Install dependencies**:
