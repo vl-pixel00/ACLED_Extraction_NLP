@@ -4,9 +4,9 @@
 
 This repository contains the implementation of my master's dissertation project investigating the application of natural language processing techniques for automated conflict event extraction from ACLED (Armed Conflict Location & Event Data Project) narratives. The research explores the efficacy of fine-tuned large language models in structured data extraction from unstructured conflict reporting, with a specific focus on Eastern Europe, Central Europe, and the Baltic States.
 
-**Base Model**: Llama 3.2 1B Instruct (4-bit quantised), 
-**ML Framework** Apple's MLX,
-**Dataset** Europe-Central-Asia_2018-2025_July.
+**Base Model**: Llama 3.2 1B Instruct (4-bit quantised)
+**ML Framework** Apple's MLX
+**Dataset** Europe-Central-Asia_2018-2025_July
 
 ## Research Objectives
 
