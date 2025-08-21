@@ -211,11 +211,11 @@ The test suite validation achieved:
 ## Performance Metrics
 
 ### Model Training Results
-- Final training loss: 0.262
-- Final validation loss: 0.255
-- Field extraction success: 62.0% average completion
+- Final training loss: 0.268
+- Final validation loss: 0.262
+- Field extraction success: 62.7% average completion
 - JSON format compliance: 100% (400/400 responses)
-- Core field accuracy: 99.2% (event_date, country, location, event_type)
+- Core field accuracy: 99.4% (event_date, country, location, event_type)
 
 ### Data Quality Assessment
 - Total records processed: 309,974
