@@ -2,7 +2,7 @@
 
 ## Abstract
 
-This repository contains the implementation of my master's dissertation project investigating the application of natural language processing techniques for automated conflict event extraction from ACLED (Armed Conflict Location & Event Data Project) narratives. The research explores the efficacy of fine-tuned large language models in structured data extraction from unstructured conflict reporting, with a specific focus on Eastern Europe, Central Europe, and the Baltic States.
+This repository contains the implementation of my master's dissertation project investigating the application of natural language processing techniques for automated conflict event extraction from ACLED data using state-of-the-art machine learning approaches.
 
 **Base Model**: Llama 3.2 1B Instruct (4-bit quantised)
 
@@ -113,21 +113,82 @@ Machine learning implementation covering:
 - Pandas, NumPy for data manipulation
 - Standard libraries: os, re, json, pathlib, etc.
 
-## Installation
+## Setup and Installation
 
-1. **Clone repository**:
+### Prerequisites
+- **Apple Silicon Mac** with at least 16GB unified memory (recommended)
+- **Python 3.11.3**
+- **Git**
+
+### Quick Setup
+
+1. **Clone the repository**:
    ```bash
-   git clone [https://github.com/vl-pixel00/ACLED_Extraction_NLP]
+   git clone https://github.com/vl-pixel00/ACLED_Extraction_NLP.git
    cd ACLED_Extraction_NLP
+   ```
 
-2. **Install dependencies**:
-    ```bash
-    pip install -r requirements.txt
+2. **Create Python environment**:
+   ```bash
+   # Using virtual environment (recommended)
+   python3.11 -m venv acled_env
+   source acled_env/bin/activate
+   
+   # Or using conda
+   conda create -n acled_env python=3.11.3
+   conda activate acled_env
+   ```
 
-3. **Verify MLX installation (Apple Silicon only)**:
-    ```bash
-    import mlx.core as mx
-    print(f"MLX version: {mx.__version__}")
+3. **Install dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Verify MLX installation**:
+   ```bash
+   python -c "import mlx.core as mx; print(f'MLX version: {mx.__version__}')"
+   ```
+
+### Running the Notebooks
+
+#### Using VS Code (Recommended)
+1. Install the Python and Jupyter extensions
+2. Open the project folder: `code .`
+3. Select your Python interpreter (acled_env)
+4. Open notebooks and run cells with `Shift+Enter`
+
+#### Using Jupyter Lab
+```bash
+source acled_env/bin/activate
+jupyter lab
+```
+
+### Execution Order
+Run notebooks in this sequence:
+1. **Data_Analysis_CEB.ipynb** - Data exploration and quality assessment
+2. **Data_Filtering_Export.ipynb** - Data processing and extraction
+3. **Model_Fine_Tuning.ipynb** - Model training
+
+### Data Requirements
+This repository does not include the ACLED dataset. To use:
+1. Register at [acleddata.com](https://acleddata.com)
+2. Download: Europe-Central-Asia_2018-2025_July04.csv
+3. Place the file in the project root directory
+
+### Troubleshooting
+
+**MLX Installation Issues**:
+```bash
+pip install --upgrade pip setuptools wheel
+pip install mlx mlx-lm --no-cache-dir
+```
+
+**Jupyter Kernel Issues**:
+```bash
+python -m ipykernel install --user --name=acled_env
+```
+
+**Memory Issues**: Close other applications during model training and ensure sufficient system memory.
 
 ## Research Significance
 
@@ -216,6 +277,6 @@ I extend my gratitude to the organisations and research projects whose contribut
 
 ---
 
-**Disclaimer**: This research is conducted for academic purposes only. The findings and methodologies presented are not intended for operational intelligence or policy-making applications. Users should exercise appropriate caution when interpreting conflict-related data and analyses.
+**Disclaimer**: This research is conducted for academic purposes only. The findings and methodologies presented are not intended for operational intelligence or policy-making applications.
 
 **Third-Party Acknowledgement**: This project builds upon the work of ACLED, the Llama model developers, and Apple's MLX team. All trademarks and intellectual property rights remain with their respective owners.
